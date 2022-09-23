@@ -1,0 +1,29 @@
+.button {
+  display: block;
+  width: 100%;
+  height: $size_xl;
+  border-radius: $size_md;
+  transition: background-color $duration_fast, color $duration_fast;
+  background: $color_card;
+  color: $color_text;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color_border;
+  }
+
+  &--primary {
+    background-color: $color_primary;
+
+    &:hover {
+      background-color: $color_primary_inverted;
+      color: $color_text_inverted;
+    }
+  }
+
+  &--large {
+    height: $size_xxl;
+    border-radius: $size_lg;
+    font-size: $fontSize_lg;
+  }
+}

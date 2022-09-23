@@ -1,0 +1,60 @@
+.tabs {
+  position: relative;
+  border-radius: $size_md;
+  background: $color_card;
+  overflow: hidden;
+
+  &__holder {
+    display: flex;
+  }
+
+  &__tab {
+    flex: 1;
+    border-color: transparent;
+    height: $size_xl;
+    border-right: $size_border solid $color_border;
+    transition: background-color $duration_fast, color $duration_fast;
+    cursor: pointer;
+    color: $color_text;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: $color_border;
+    }
+
+    &--active {
+      cursor: default;
+
+      &.tabs__tab--optional {
+        cursor: pointer;
+        background-color: $color_primary;
+
+        &:hover {
+          background-color: $color_primary_inverted;
+          color: $color_text_inverted;
+        }
+      }
+    }
+  }
+
+  &__tab-title {
+    position: relative;
+    pointer-events: none;
+  }
+
+  &__selector {
+    background: $color_primary;
+    position: absolute;
+    height: $size_xl;
+    transition: left $duration_fast, width $duration_fast,
+      background-color $duration_fast;
+    pointer-events: none;
+
+    &--hidden {
+      background-color: transparent;
+    }
+  }
+}

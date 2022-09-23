@@ -1,0 +1,29 @@
+.switch {
+  background: $color_card;
+  height: $size_xl;
+  width: $size_xxl;
+  border-radius: $size_md;
+  transition: background-color $duration_fast;
+  cursor: pointer;
+  position: relative;
+
+  &__dot {
+    width: $size_lg;
+    height: $size_lg;
+    left: $size_xs;
+    top: $size_xs;
+    background: $color_border;
+    border-radius: calc($size_lg / 2);
+    position: absolute;
+    transition: left $duration_fast, background-color $duration_fast;
+  }
+
+  &--active {
+    background-color: $color_primary;
+  }
+
+  &--active &__dot {
+    background-color: $color_text;
+    left: 20px;
+  }
+}
