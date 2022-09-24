@@ -1,7 +1,7 @@
 import { IComponent } from "@/types/component";
-import { IMargins } from "@/utils/styleModifiers/margins/props";
+import { IMargin } from "@/utils/styleModifiers/margin/props";
 
-export interface IButton extends IComponent, IMargins {
+export interface IButton extends IComponent, IMargin {
   variant?: "default" | "primary";
   onClick?: () => void;
   size?: "default" | "large";

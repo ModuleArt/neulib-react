@@ -5,8 +5,14 @@
   width: $size_icon;
   height: $size_icon;
 
-  .svg-inline--fa {
-    width: $size_icon;
-    height: $size_icon;
+  &__fa {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
   }
 }

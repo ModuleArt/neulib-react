@@ -1,7 +1,7 @@
 // utils
-import { IMargins } from "./props";
+import { IMargin } from "./props";
 
-export const applyMargins = ({ m }: IMargins) => {
+export const applyMargin = ({ m }: IMargin) => {
   return m === undefined
     ? undefined
     : typeof m === "number"

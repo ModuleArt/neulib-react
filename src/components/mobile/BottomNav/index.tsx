@@ -10,7 +10,7 @@ import Icon from "@/components/basic/Icon";
 import "./styles.scss";
 
 // style modifiers
-import { applyMargins } from "@/utils/styleModifiers/margins";
+import { applyMargin } from "@/utils/styleModifiers/margin";
 
 const BottomNav: FunctionComponent<IBottomNav> = ({
   leftButtons,
@@ -18,10 +18,10 @@ const BottomNav: FunctionComponent<IBottomNav> = ({
   onButtonClick,
   activeButtonId,
   children,
-  ...props
+  m,
 }) => {
   return (
-    <div className="bottom-nav" style={{ ...applyMargins(props) }}>
+    <div className="bottom-nav" style={{ ...applyMargin({ m }) }}>
       {leftButtons && leftButtons.length > 0 && (
         <div className="bottom-nav__holder bottom-nav__holder--left">
           {leftButtons?.map((button) => (
@@ -34,7 +34,7 @@ const BottomNav: FunctionComponent<IBottomNav> = ({
               onClick={() => onButtonClick && onButtonClick(button.id)}
             >
               <div className="bottom-nav__icon">
-                <Icon icon={button.icon} />
+                <Icon {...button.icon} />
               </div>
             </button>
           ))}
@@ -53,7 +53,7 @@ const BottomNav: FunctionComponent<IBottomNav> = ({
               onClick={() => onButtonClick && onButtonClick(button.id)}
             >
               <div className="bottom-nav__icon">
-                <Icon icon={button.icon} />
+                <Icon {...button.icon} />
               </div>
             </button>
           ))}

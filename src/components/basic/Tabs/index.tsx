@@ -7,21 +7,20 @@ import cn from "classnames";
 import "./styles.scss";
 
 // style modifiers
-import { applyMargins } from "@/utils/styleModifiers/margins";
+import { applyMargin } from "@/utils/styleModifiers/margin";
 
 const Tabs: FunctionComponent<ITabs> = ({
   tabs,
   activeTabId,
   onChange,
   optional = false,
-
-  ...props
+  m,
 }) => {
   const activeTabIndex =
     activeTabId === "" ? 0 : tabs.findIndex((tab) => tab.id === activeTabId);
 
   return (
-    <div className="tabs" style={{ ...applyMargins(props) }}>
+    <div className="tabs" style={{ ...applyMargin({ m }) }}>
       {!optional && (
         <div
           className="tabs__selector"

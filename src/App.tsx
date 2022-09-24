@@ -2,11 +2,14 @@
 import { FunctionComponent, useState } from "react";
 
 // components
+import Icon from "@/components/basic/Icon";
 import Button from "@/components/basic/Button";
 import Switch from "@/components/basic/Switch";
 import Tabs from "@/components/basic/Tabs";
-import Fab from "./components/basic/Fab";
-import BottomNav from "./components/mobile/BottomNav";
+import Fab from "@/components/basic/Fab";
+import BottomNav from "@/components/mobile/BottomNav";
+import TopBar from "@/components/basic/TopBar";
+import Modal from "@/components/basic/Modal";
 
 // icons
 import {
@@ -15,6 +18,7 @@ import {
   faWallet,
   faListUl,
   faMagnifyingGlass,
+  faSackDollar,
 } from "@fortawesome/free-solid-svg-icons";
 
 const App: FunctionComponent = () => {
@@ -29,34 +33,35 @@ const App: FunctionComponent = () => {
   const [navButtons1] = useState([
     {
       id: "1",
-      icon: faArrowsTurnToDots,
+      icon: { icon: faArrowsTurnToDots },
     },
     {
       id: "2",
-      icon: faWallet,
+      icon: { icon: faWallet },
     },
   ]);
   const [navButtons2] = useState([
     {
       id: "3",
-      icon: faListUl,
+      icon: { icon: faListUl },
     },
     {
       id: "4",
-      icon: faMagnifyingGlass,
+      icon: { icon: faMagnifyingGlass },
     },
   ]);
   const [activeNavButtonId, setActiveNavButtonId] = useState("1");
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className="app">
+      {"basic/Icon"}
+      <Icon icon={faWallet} m={{ mt: 16, mb: 48 }} />
       {"basic/Button"}
-      <Button m={{ mt: 16, mb: 48 }}>Button</Button>
-      {"basic/Button { variant: 'primary' }"}
-      <Button variant="primary" m={{ mt: 16, mb: 48 }}>
+      <Button m={{ mt: 16 }}>Button</Button>
+      <Button variant="primary" m={{ mt: 16 }}>
         Button
       </Button>
-      {"basic/Button { variant: 'primary', size: 'large' }"}
       <Button variant="primary" size="large" m={{ mt: 16, mb: 48 }}>
         Button
       </Button>
@@ -67,9 +72,8 @@ const App: FunctionComponent = () => {
         tabs={tabs}
         activeTabId={activeTabId}
         onChange={setActiveTabId}
-        m={{ mt: 16, mb: 48 }}
+        m={{ mt: 16 }}
       />
-      {"basic/Tabs { optional: true }"}
       <Tabs
         tabs={tabs}
         activeTabId={activeTabId2}
@@ -77,9 +81,16 @@ const App: FunctionComponent = () => {
         optional
         m={{ mt: 16, mb: 48 }}
       />
-      {"basic/Fab { variant: 'primary', icon: 'faPlus' }"}
-      <Fab variant="primary" icon={faListUl} m={{ mt: 16, mb: 48 }} />
-      {"mobile/BottomNav { children: Fab }"}
+      {"basic/Fab"}
+      <Fab icon={{ icon: faListUl }} m={{ mt: 16 }} />
+      <Fab icon={{ icon: faListUl }} variant="primary" m={{ mt: 16 }} />
+      <Fab
+        icon={{ icon: faListUl }}
+        variant="nobg"
+        iconColor="secondary"
+        m={{ mt: 16, mb: 48 }}
+      />
+      {"mobile/BottomNav"}
       <BottomNav
         leftButtons={navButtons1}
         rightButtons={navButtons2}
@@ -87,8 +98,60 @@ const App: FunctionComponent = () => {
         onButtonClick={setActiveNavButtonId}
         m={{ mt: 16, mb: 48 }}
       >
-        <Fab variant="primary" icon={faPlus} />
+        <Fab variant="primary" icon={{ icon: faPlus }} />
       </BottomNav>
+      {"basic/TopBar"}
+      <TopBar
+        title="Title"
+        subtitle="Subtitle"
+        leftElement={
+          <Fab
+            icon={{
+              icon: "https://cdn140.picsart.com/26310888-8bb9-4817-9815-f9c2dbbb509a/378333362007203.jpg?type=webp&to=crop&r=256",
+              p: 0,
+            }}
+            variant="nobg"
+          />
+        }
+        rightElement={
+          <Fab
+            icon={{ icon: faSackDollar }}
+            iconColor="secondary"
+            variant="nobg"
+          />
+        }
+        card={{ p: { py: 8, px: 12 }, m: { mt: 16 } }}
+      />
+      <TopBar
+        title="Title"
+        subtitle="Subtitle"
+        titleAlign="left"
+        leftElement={
+          <Icon
+            icon="https://cdn140.picsart.com/26310888-8bb9-4817-9815-f9c2dbbb509a/378333362007203.jpg?type=webp&to=crop&r=256"
+            p={0}
+            m={{ mr: 16 }}
+          />
+        }
+        card={{ m: { mt: 16 } }}
+      />
+      <TopBar
+        title="Title"
+        subtitle="Subtitle"
+        titleAlign="right"
+        card={{ m: { mt: 16, mb: 48 } }}
+      />
+      {"basic/Modal"}
+      <Button onClick={() => setShowModal(true)} m={{ mt: 16, mb: 48 }}>
+        Show Modal
+      </Button>
+      <Modal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        header={{ title: "Modal titlte" }}
+      >
+        sadf
+      </Modal>
     </div>
   );
 };

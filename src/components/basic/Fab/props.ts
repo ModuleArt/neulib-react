@@ -1,9 +1,9 @@
-import { IComponent } from "@/types/component";
-import { IMargins } from "@/utils/styleModifiers/margins/props";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IMargin } from "@/utils/styleModifiers/margin/props";
+import { IIcon } from "@/components/basic/Icon/props";
 
-export interface IFab extends IComponent, IMargins {
-  variant?: "default" | "primary";
+export interface IFab extends IMargin {
+  variant?: "default" | "primary" | "nobg";
   onClick?: () => void;
-  icon: IconDefinition;
+  iconColor?: "default" | "secondary";
+  icon: IIcon;
 }

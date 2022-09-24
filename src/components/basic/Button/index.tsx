@@ -7,14 +7,14 @@ import cn from "classnames";
 import "./styles.scss";
 
 // style modifiers
-import { applyMargins } from "@/utils/styleModifiers/margins";
+import { applyMargin } from "@/utils/styleModifiers/margin";
 
 const Button: FunctionComponent<IButton> = ({
   variant = "default",
   onClick,
   size = "default",
   children,
-  ...props
+  m,
 }) => {
   return (
     <button
@@ -23,7 +23,8 @@ const Button: FunctionComponent<IButton> = ({
         "button--primary": variant === "primary",
         "button--large": size === "large",
       })}
-      style={{ ...applyMargins(props) }}
+      style={{ ...applyMargin({ m }) }}
+      onClick={onClick}
     >
       {children}
     </button>

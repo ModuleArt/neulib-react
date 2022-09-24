@@ -7,13 +7,9 @@ import cn from "classnames";
 import "./styles.scss";
 
 // style modifiers
-import { applyMargins } from "@/utils/styleModifiers/margins";
+import { applyMargin } from "@/utils/styleModifiers/margin";
 
-const Switch: FunctionComponent<ISwitch> = ({
-  value = false,
-  onChange,
-  ...props
-}) => {
+const Switch: FunctionComponent<ISwitch> = ({ value = false, onChange, m }) => {
   return (
     <button
       className={cn({
@@ -21,7 +17,7 @@ const Switch: FunctionComponent<ISwitch> = ({
         "switch--active": value,
       })}
       onClick={() => onChange && onChange(!value)}
-      style={{ ...applyMargins(props) }}
+      style={{ ...applyMargin({ m }) }}
     >
       <div className="switch__dot" />
     </button>

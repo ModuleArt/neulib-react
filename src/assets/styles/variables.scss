@@ -10,7 +10,8 @@ $color_text_secondary: #9a9a9a;
 
 // size
 $size_border: 1px;
-$size_icon: 20px;
+$size_icon: 24px;
+$size_xxs: 2px;
 $size_xs: 4px;
 $size_sm: 8px;
 $size_md: 16px;
@@ -39,5 +40,5 @@ $fontWeight_default: 500;
 $fontWeight_bold: bold;
 
 // outline
-$outline_focus: 2px solid $color_primary_inverted;
-$outline_offset: -2px;
+$outline_focus: $size_xxs solid $color_primary_inverted;
+$outline_offset: -$size_xxs;

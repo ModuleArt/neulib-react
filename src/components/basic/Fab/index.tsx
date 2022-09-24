@@ -10,23 +10,33 @@ import Icon from "@/components/basic/Icon";
 import "./styles.scss";
 
 // style modifiers
-import { applyMargins } from "@/utils/styleModifiers/margins";
+import { applyMargin } from "@/utils/styleModifiers/margin";
 
 const Fab: FunctionComponent<IFab> = ({
   variant = "default",
   onClick,
+  iconColor = "default",
+  m,
   icon,
-  ...props
 }) => {
   return (
     <button
       className={cn({
         fab: true,
         "fab--primary": variant === "primary",
+        "fab--nobg": variant === "nobg",
       })}
-      style={{ ...applyMargins(props) }}
+      onClick={onClick}
+      style={{ ...applyMargin({ m }) }}
     >
-      <Icon icon={icon} />
+      <div
+        className={cn({
+          fab__icon: true,
+          "fab__icon--secondary": iconColor === "secondary",
+        })}
+      >
+        <Icon {...icon} />
+      </div>
     </button>
   );
 };

@@ -1,15 +1,16 @@
 import { IComponent } from "@/types/component";
-import { IMargins } from "@/utils/styleModifiers/margins/props";
+import { IMargin } from "@/utils/styleModifiers/margin/props";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { IIcon } from "@/components/basic/Icon/props";
 
-export interface IBottomNav extends IComponent, IMargins {
+export interface IBottomNav extends IComponent, IMargin {
   leftButtons?: {
     id: string;
-    icon: IconDefinition;
+    icon: IIcon;
   }[];
   rightButtons?: {
     id: string;
-    icon: IconDefinition;
+    icon: IIcon;
   }[];
   activeButtonId?: string;
   onButtonClick?: (navButtonId: string) => void;

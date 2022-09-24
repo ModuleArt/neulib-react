@@ -1,4 +1,4 @@
-export interface IMargins {
+export interface IMargin {
   m?:
     | number
     | {
