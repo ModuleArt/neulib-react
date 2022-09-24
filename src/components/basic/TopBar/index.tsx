@@ -2,6 +2,7 @@
 import { FunctionComponent } from "react";
 import { ITopBar } from "./props";
 import cn from "classnames";
+import { applyDefaultProps } from "@/utils/componentModifiers";
 
 // components
 import Card from "@/components/basic/Card";
@@ -15,8 +16,10 @@ const TopBar: FunctionComponent<ITopBar> = ({
   titleAlign = "center",
   leftElement,
   rightElement,
-  card = { p: { px: 24, py: 12 } },
+  card,
 }) => {
+  card = applyDefaultProps({ p: { py: 12 } }, card);
+
   return (
     <div
       className={cn({

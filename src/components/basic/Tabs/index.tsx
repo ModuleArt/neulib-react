@@ -6,8 +6,8 @@ import cn from "classnames";
 // styles
 import "./styles.scss";
 
-// style modifiers
-import { applyMargin } from "@/utils/styleModifiers/margin";
+// component modifiers
+import { applyMargin } from "@/utils/componentModifiers/margin";
 
 const Tabs: FunctionComponent<ITabs> = ({
   tabs,

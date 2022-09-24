@@ -2,13 +2,14 @@
 import { FunctionComponent } from "react";
 import { ICard } from "./props";
 import cn from "classnames";
+import { applyDefaultProps } from "@/utils/componentModifiers";
 
 // styles
 import "./styles.scss";
 
-// style modifiers
-import { applyMargin } from "@/utils/styleModifiers/margin";
-import { applyPadding } from "@/utils/styleModifiers/padding";
+// component modifiers
+import { applyMargin } from "@/utils/componentModifiers/margin";
+import { applyPadding } from "@/utils/componentModifiers/padding";
 
 const Card: FunctionComponent<ICard> = ({
   variant = "default",
@@ -16,6 +17,8 @@ const Card: FunctionComponent<ICard> = ({
   m,
   p,
 }) => {
+  p = applyDefaultProps({ pa: 24 }, p);
+
   return (
     <div
       className={cn({

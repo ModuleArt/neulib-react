@@ -1,6 +1,7 @@
 // utils
 import { FunctionComponent, Fragment } from "react";
 import { IModal } from "./props";
+import { applyDefaultProps } from "@/utils/componentModifiers";
 
 // components
 import Portal from "@/components/core/Portal";
@@ -9,17 +10,19 @@ import TopBar from "@/components/basic/TopBar";
 // styles
 import "./styles.scss";
 
-// style modifiers
-import { applyPadding } from "@/utils/styleModifiers/padding";
+// component modifiers
+import { applyPadding } from "@/utils/componentModifiers/padding";
 
 const Modal: FunctionComponent<IModal> = ({
   show = false,
   onClose,
   children,
   maxWidth = 400,
-  p = 24,
+  p,
   header,
 }) => {
+  p = applyDefaultProps({ pa: 24 }, p);
+
   return (
     <Fragment>
       {show && (

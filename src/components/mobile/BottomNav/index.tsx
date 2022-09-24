@@ -9,8 +9,8 @@ import Icon from "@/components/basic/Icon";
 // styles
 import "./styles.scss";
 
-// style modifiers
-import { applyMargin } from "@/utils/styleModifiers/margin";
+// component modifiers
+import { applyMargin } from "@/utils/componentModifiers/margin";
 
 const BottomNav: FunctionComponent<IBottomNav> = ({
   leftButtons,

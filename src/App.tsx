@@ -19,6 +19,7 @@ import {
   faListUl,
   faMagnifyingGlass,
   faSackDollar,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 const App: FunctionComponent = () => {
@@ -55,9 +56,9 @@ const App: FunctionComponent = () => {
 
   return (
     <div className="app">
-      {"basic/Icon"}
+      Icon
       <Icon icon={faWallet} m={{ mt: 16, mb: 48 }} />
-      {"basic/Button"}
+      Button
       <Button m={{ mt: 16 }}>Button</Button>
       <Button variant="primary" m={{ mt: 16 }}>
         Button
@@ -65,9 +66,9 @@ const App: FunctionComponent = () => {
       <Button variant="primary" size="large" m={{ mt: 16, mb: 48 }}>
         Button
       </Button>
-      {"basic/Switch"}
+      Switch
       <Switch m={{ mt: 16, mb: 48 }} value={switchOn} onChange={setSwitchOn} />
-      {"basic/Tabs"}
+      Tabs
       <Tabs
         tabs={tabs}
         activeTabId={activeTabId}
@@ -81,7 +82,7 @@ const App: FunctionComponent = () => {
         optional
         m={{ mt: 16, mb: 48 }}
       />
-      {"basic/Fab"}
+      Fab
       <Fab icon={{ icon: faListUl }} m={{ mt: 16 }} />
       <Fab icon={{ icon: faListUl }} variant="primary" m={{ mt: 16 }} />
       <Fab
@@ -90,7 +91,7 @@ const App: FunctionComponent = () => {
         iconColor="secondary"
         m={{ mt: 16, mb: 48 }}
       />
-      {"mobile/BottomNav"}
+      BottomNav
       <BottomNav
         leftButtons={navButtons1}
         rightButtons={navButtons2}
@@ -100,7 +101,7 @@ const App: FunctionComponent = () => {
       >
         <Fab variant="primary" icon={{ icon: faPlus }} />
       </BottomNav>
-      {"basic/TopBar"}
+      TopBar
       <TopBar
         title="Title"
         subtitle="Subtitle"
@@ -129,7 +130,7 @@ const App: FunctionComponent = () => {
         leftElement={
           <Icon
             icon="https://cdn140.picsart.com/26310888-8bb9-4817-9815-f9c2dbbb509a/378333362007203.jpg?type=webp&to=crop&r=256"
-            p={0}
+            p={{ pa: 0 }}
             m={{ mr: 16 }}
           />
         }
@@ -141,14 +142,24 @@ const App: FunctionComponent = () => {
         titleAlign="right"
         card={{ m: { mt: 16, mb: 48 } }}
       />
-      {"basic/Modal"}
+      Modal
       <Button onClick={() => setShowModal(true)} m={{ mt: 16, mb: 48 }}>
         Show Modal
       </Button>
       <Modal
         show={showModal}
         onClose={() => setShowModal(false)}
-        header={{ title: "Modal titlte" }}
+        header={{
+          title: "Modal titlte",
+          card: { p: { py: 8, px: 12 } },
+          rightElement: (
+            <Fab
+              icon={{ icon: faXmark }}
+              iconColor="secondary"
+              onClick={() => setShowModal(false)}
+            />
+          ),
+        }}
       >
         sadf
       </Modal>

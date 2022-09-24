@@ -4,8 +4,6 @@ import { IMargin } from "./props";
 export const applyMargin = ({ m }: IMargin) => {
   return m === undefined
     ? undefined
-    : typeof m === "number"
-    ? { margin: `${m}px` }
     : {
         ...(m.ma !== undefined && { margin: `${m.ma}px` }),
         ...(m.my !== undefined && {

@@ -4,8 +4,6 @@ import { IPadding } from "./props";
 export const applyPadding = ({ p }: IPadding) => {
   return p === undefined
     ? undefined
-    : typeof p === "number"
-    ? { padding: `${p}px` }
     : {
         ...(p.pa !== undefined && { padding: `${p.pa}px` }),
         ...(p.py !== undefined && {
