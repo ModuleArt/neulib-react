@@ -1,5 +1,5 @@
 .button {
-  display: block;
+  display: flex;
   width: 100%;
   height: $size_xl;
   border-radius: $size_md;
@@ -7,6 +7,15 @@
   background: $color_card;
   color: $color_text;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 0 $size_lg;
+  outline-offset: $outline_offset;
+
+  &:focus-visible {
+    outline: $outline_focus;
+  }
 
   &:hover {
     background-color: $color_border;
@@ -25,5 +34,6 @@
     height: $size_xxl;
     border-radius: $size_lg;
     font-size: $fontSize_lg;
+    padding: 0 $size_xl;
   }
 }

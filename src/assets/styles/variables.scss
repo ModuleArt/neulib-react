@@ -5,17 +5,19 @@ $color_border: #444444;
 $color_primary: #0484ff;
 $color_primary_inverted: #ffffff;
 $color_text: #ffffff;
-$color_text_inverted: #000000;
+$color_text_inverted: #1c1c1c;
 $color_text_secondary: #9a9a9a;
 
 // size
 $size_border: 1px;
+$size_icon: 20px;
 $size_xs: 4px;
 $size_sm: 8px;
 $size_md: 16px;
 $size_lg: 24px;
 $size_xl: 32px;
 $size_xxl: 48px;
+$size_max: 64px;
 
 // font size
 $fontSize_default: 14px;
@@ -35,3 +37,7 @@ $fontFamily_default: "Inter var experimental", "Inter var", ui-sans-serif,
 // font weight
 $fontWeight_default: 500;
 $fontWeight_bold: bold;
+
+// outline
+$outline_focus: 2px solid $color_primary_inverted;
+$outline_offset: -2px;

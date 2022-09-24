@@ -1,0 +1,43 @@
+.bottom-nav {
+  border-radius: $size_lg;
+  height: $size_max;
+  background: $color_card;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  &__holder {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    padding: 0 $size_lg;
+  }
+
+  &__button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color_text_secondary;
+    cursor: pointer;
+    transition: background-color $duration_fast, color $duration_fast;
+    outline-offset: $outline_offset;
+
+    &:focus-visible {
+      outline: $outline_focus;
+    }
+
+    &:hover {
+      background-color: $color_border;
+    }
+
+    &--active {
+      color: $color_primary;
+    }
+  }
+
+  &__icon {
+    width: $size_icon;
+    height: $size_icon;
+  }
+}

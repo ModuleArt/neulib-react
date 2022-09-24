@@ -3,12 +3,11 @@ import { FunctionComponent } from "react";
 import { IButton } from "./props";
 import cn from "classnames";
 
-// components
-import Element from "@/components/core/Element";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 // styles
 import "./styles.scss";
+
+// style modifiers
+import { applyMargins } from "@/utils/styleModifiers/margins";
 
 const Button: FunctionComponent<IButton> = ({
   variant = "default",
@@ -18,17 +17,16 @@ const Button: FunctionComponent<IButton> = ({
   ...props
 }) => {
   return (
-    <Element {...props}>
-      <button
-        className={cn({
-          button: true,
-          "button--primary": variant === "primary",
-          "button--large": size === "large",
-        })}
-      >
-        {children}
-      </button>
-    </Element>
+    <button
+      className={cn({
+        button: true,
+        "button--primary": variant === "primary",
+        "button--large": size === "large",
+      })}
+      style={{ ...applyMargins(props) }}
+    >
+      {children}
+    </button>
   );
 };
 

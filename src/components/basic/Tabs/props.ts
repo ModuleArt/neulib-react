@@ -1,6 +1,7 @@
-import { IElement } from "@/components/core/Element/props";
+import { IComponent } from "@/types/component";
+import { IMargins } from "@/utils/styleModifiers/margins/props";
 
-export interface ITabs extends IElement {
+export interface ITabs extends IComponent, IMargins {
   tabs: { title: string; id: string }[];
   activeTabId?: string;
   onChange?: (tabId: string) => void;

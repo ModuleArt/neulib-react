@@ -7,10 +7,18 @@ export const applyMargins = ({ m }: IMargins) => {
     : typeof m === "number"
     ? { margin: `${m}px` }
     : {
-        ...(m.all !== undefined && { margin: `${m.all}px` }),
-        ...(m.top !== undefined && { marginTop: `${m.top}px` }),
-        ...(m.right !== undefined && { marginRight: `${m.right}px` }),
-        ...(m.bottom !== undefined && { marginBottom: `${m.bottom}px` }),
-        ...(m.left !== undefined && { marginLeft: `${m.left}px` }),
+        ...(m.ma !== undefined && { margin: `${m.ma}px` }),
+        ...(m.my !== undefined && {
+          marginTop: `${m.my}px`,
+          marginBottom: `${m.my}px`,
+        }),
+        ...(m.mx !== undefined && {
+          marginRight: `${m.mx}px`,
+          marginLeft: `${m.mx}px`,
+        }),
+        ...(m.mt !== undefined && { marginTop: `${m.mt}px` }),
+        ...(m.mr !== undefined && { marginRight: `${m.mr}px` }),
+        ...(m.mb !== undefined && { marginBottom: `${m.mb}px` }),
+        ...(m.ml !== undefined && { marginLeft: `${m.ml}px` }),
       };
 };

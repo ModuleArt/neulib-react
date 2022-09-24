@@ -1,23 +1,36 @@
 .tabs {
   position: relative;
   border-radius: $size_md;
-  background: $color_card;
   overflow: hidden;
 
   &__holder {
     display: flex;
+    height: $size_xl;
   }
 
   &__tab {
     flex: 1;
+    background: $color_card;
     border-color: transparent;
-    height: $size_xl;
+    height: 100%;
     border-right: $size_border solid $color_border;
     transition: background-color $duration_fast, color $duration_fast;
     cursor: pointer;
     color: $color_text;
+    outline-offset: $outline_offset;
+
+    &:focus-visible {
+      outline: $outline_focus;
+    }
+
+    &:first-child {
+      border-top-left-radius: $size_md;
+      border-bottom-left-radius: $size_md;
+    }
 
     &:last-child {
+      border-top-right-radius: $size_md;
+      border-bottom-right-radius: $size_md;
       border-right: none;
     }
 
@@ -48,7 +61,7 @@
   &__selector {
     background: $color_primary;
     position: absolute;
-    height: $size_xl;
+    height: 100%;
     transition: left $duration_fast, width $duration_fast,
       background-color $duration_fast;
     pointer-events: none;

@@ -9,12 +9,10 @@
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  outline-offset: $outline_offset;
 
-  &__icon {
-    .svg-inline--fa {
-      width: 24px;
-      height: 24px;
-    }
+  &:focus-visible {
+    outline: $outline_focus;
   }
 
   &:hover {

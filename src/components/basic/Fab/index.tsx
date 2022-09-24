@@ -4,11 +4,12 @@ import { IFab } from "./props";
 import cn from "classnames";
 
 // components
-import Element from "@/components/core/Element";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from "@/components/basic/Icon";
 
 // styles
 import "./styles.scss";
+
+// style modifiers
 import { applyMargins } from "@/utils/styleModifiers/margins";
 
 const Fab: FunctionComponent<IFab> = ({
@@ -25,9 +26,7 @@ const Fab: FunctionComponent<IFab> = ({
       })}
       style={{ ...applyMargins(props) }}
     >
-      <div className="fab__icon">
-        <FontAwesomeIcon icon={icon} />
-      </div>
+      <Icon icon={icon} />
     </button>
   );
 };

@@ -1,0 +1,12 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size_icon;
+  height: $size_icon;
+
+  .svg-inline--fa {
+    width: $size_icon;
+    height: $size_icon;
+  }
+}

@@ -1,6 +1,7 @@
-import { IElement } from "@/components/core/Element/props";
+import { IComponent } from "@/types/component";
+import { IMargins } from "@/utils/styleModifiers/margins/props";
 
-export interface IButton extends IElement {
+export interface ISwitch extends IComponent, IMargins {
   value?: boolean;
   onChange?: (value: boolean) => void;
 }
