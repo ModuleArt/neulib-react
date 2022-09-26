@@ -36,4 +36,8 @@
     font-size: $fontSize_lg;
     padding: 0 $size_xl;
   }
+
+  &--nobg {
+    background: none;
+  }
 }

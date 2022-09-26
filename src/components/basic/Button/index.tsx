@@ -22,6 +22,7 @@ const Button: FunctionComponent<IButton> = ({
         button: true,
         "button--primary": variant === "primary",
         "button--large": size === "large",
+        "button--nobg": variant === "nobg",
       })}
       style={{ ...applyMargin({ m }) }}
       onClick={onClick}

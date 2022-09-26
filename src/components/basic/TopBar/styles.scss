@@ -1,6 +1,5 @@
 .top-bar {
   &__container {
-    // height: $size_max;
     display: flex;
     align-items: center;
   }
@@ -34,6 +33,7 @@
 
   &__title {
     font-size: $fontSize_lg;
+    color: $color_text;
   }
 
   &__subtitle {
