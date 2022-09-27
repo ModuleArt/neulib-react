@@ -2,14 +2,14 @@
 import { FunctionComponent, useState } from "react";
 
 // components
-import Icon from "@/components/basic/Icon";
-import Button from "@/components/basic/Button";
-import Switch from "@/components/basic/Switch";
-import Tabs from "@/components/basic/Tabs";
-import Fab from "@/components/basic/Fab";
-import BottomNav from "@/components/mobile/BottomNav";
-import TopBar from "@/components/basic/TopBar";
-import Modal from "@/components/basic/Modal";
+import Icon from "@/components/public/Icon";
+import Button from "@/components/public/Button";
+import Switch from "@/components/public/Switch";
+import Tabs from "@/components/public/Tabs";
+import Fab from "@/components/public/Fab";
+import BottomNav from "@/components/public/BottomNav";
+import TopBar from "@/components/public/TopBar";
+import Modal from "@/components/public/Modal";
 
 // icons
 import {
@@ -126,7 +126,7 @@ const App: FunctionComponent = () => {
       <TopBar
         title="Title"
         subtitle="Subtitle"
-        titleAlign="left"
+        textAlign="left"
         leftElement={
           <Icon
             icon="https://cdn140.picsart.com/26310888-8bb9-4817-9815-f9c2dbbb509a/378333362007203.jpg?type=webp&to=crop&r=256"
@@ -139,7 +139,7 @@ const App: FunctionComponent = () => {
       <TopBar
         title="Title"
         subtitle="Subtitle"
-        titleAlign="right"
+        textAlign="right"
         card={{ m: { mt: 16, mb: 48 } }}
       />
       Modal

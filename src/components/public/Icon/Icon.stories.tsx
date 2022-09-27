@@ -8,7 +8,7 @@ import Icon from "./index";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const meta: ComponentMeta<typeof Icon> = {
-  title: "Basic/Icon",
+  title: "Atoms/Icon",
   component: Icon,
 };
 export default meta;

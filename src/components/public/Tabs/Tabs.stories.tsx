@@ -6,7 +6,7 @@ import { useArgs } from "@storybook/client-api";
 import Tabs from "./index";
 
 const meta: ComponentMeta<typeof Tabs> = {
-  title: "Basic/Tabs",
+  title: "Atoms/Tabs",
   component: Tabs,
 };
 export default meta;

@@ -4,7 +4,7 @@ import { IFab } from "./props";
 import cn from "classnames";
 
 // components
-import Icon from "@/components/basic/Icon";
+import Icon from "@/components/public/Icon";
 
 // styles
 import "./styles.scss";

@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import Card from "./index";
 
 const meta: ComponentMeta<typeof Card> = {
-  title: "Basic/Card",
+  title: "Atoms/Card",
   component: Card,
 };
 export default meta;

@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 // components
 import Modal from "./index";
-import Fab from "@/components/basic/Fab";
+import Fab from "@/components/public/Fab";
 
 // icons
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -23,5 +23,7 @@ export const Default: ComponentStoryObj<typeof Modal> = {
       card: { p: { py: 8, px: 12 } },
       rightElement: <Fab icon={{ icon: faXmark }} iconColor="secondary" />,
     },
+    posX: "center",
+    posY: "center",
   },
 };

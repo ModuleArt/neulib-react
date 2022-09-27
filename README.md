@@ -29,6 +29,9 @@ Components:
 - [ ] Button "icon" prop
 - [ ] Button IPadding
 - [ ] Switch "variant" prop: "default" | "primary"
+- [ ] Modal animation
+- [x] Modal "position" prop
+- [ ] Backdrop component
 
 ### Applications that use the library:
 

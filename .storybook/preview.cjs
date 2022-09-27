@@ -21,4 +21,9 @@ export const parameters = {
       },
     ],
   },
+  options: {
+    storySort: {
+      order: ["Atoms", "Portals", "Complex"],
+    },
+  },
 };

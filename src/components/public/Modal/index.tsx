@@ -2,10 +2,11 @@
 import { FunctionComponent, Fragment } from "react";
 import { IModal } from "./props";
 import { applyDefaultProps } from "@/utils/componentModifiers";
+import cn from "classnames";
 
 // components
 import Portal from "@/components/core/Portal";
-import TopBar from "@/components/basic/TopBar";
+import TopBar from "@/components/public/TopBar";
 
 // styles
 import "./styles.scss";
@@ -20,6 +21,8 @@ const Modal: FunctionComponent<IModal> = ({
   maxWidth = 400,
   p,
   header,
+  posX = "center",
+  posY = "center",
 }) => {
   p = applyDefaultProps({ pa: 24 }, p);
 
@@ -27,7 +30,13 @@ const Modal: FunctionComponent<IModal> = ({
     <Fragment>
       {show && (
         <Portal>
-          <div className="modal">
+          <div
+            className={cn({
+              modal: true,
+              [`modal--pos-x-${posX}`]: true,
+              [`modal--pos-y-${posY}`]: true,
+            })}
+          >
             <div className="modal__backdrop" onClick={onClose}>
               <div
                 className="modal__container"

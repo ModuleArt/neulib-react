@@ -1,5 +1,5 @@
 import { IMargin } from "@/utils/componentModifiers/margin/props";
-import { IIcon } from "@/components/basic/Icon/props";
+import { IIcon } from "@/components/public/Icon/props";
 
 export interface IFab extends IMargin {
   variant?: "default" | "primary" | "nobg";

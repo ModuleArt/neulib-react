@@ -1,7 +1,6 @@
 import { IComponent } from "@/types/component";
 import { IMargin } from "@/utils/componentModifiers/margin/props";
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { IIcon } from "@/components/basic/Icon/props";
+import { IIcon } from "@/components/public/Icon/props";
 
 export interface IBottomNav extends IComponent, IMargin {
   leftButtons?: {

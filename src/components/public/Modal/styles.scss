@@ -24,4 +24,20 @@
     background: $color_card;
     border-radius: $size_lg;
   }
+
+  &--pos-x-left &__backdrop {
+    justify-content: flex-start;
+  }
+
+  &--pos-x-right &__backdrop {
+    justify-content: flex-end;
+  }
+
+  &--pos-y-top &__backdrop {
+    align-items: flex-start;
+  }
+
+  &--pos-y-bottom &__backdrop {
+    align-items: flex-end;
+  }
 }

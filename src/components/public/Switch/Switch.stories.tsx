@@ -5,7 +5,7 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import Switch from "./index";
 
 const meta: ComponentMeta<typeof Switch> = {
-  title: "Basic/Switch",
+  title: "Atoms/Switch",
   component: Switch,
 };
 export default meta;

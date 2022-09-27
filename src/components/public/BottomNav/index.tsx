@@ -4,7 +4,7 @@ import { IBottomNav } from "./props";
 import cn from "classnames";
 
 // components
-import Icon from "@/components/basic/Icon";
+import Icon from "@/components/public/Icon";
 
 // styles
 import "./styles.scss";
@@ -40,7 +40,7 @@ const BottomNav: FunctionComponent<IBottomNav> = ({
           ))}
         </div>
       )}
-      {children}
+      {children && <div className="bottom-nav__children">{children}</div>}
       {rightButtons && rightButtons.length > 0 && (
         <div className="bottom-nav__holder bottom-nav__holder--right">
           {rightButtons?.map((button) => (

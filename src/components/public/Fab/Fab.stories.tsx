@@ -8,7 +8,7 @@ import Fab from "./index";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const meta: ComponentMeta<typeof Fab> = {
-  title: "Basic/Fab",
+  title: "Atoms/Fab",
   component: Fab,
 };
 export default meta;

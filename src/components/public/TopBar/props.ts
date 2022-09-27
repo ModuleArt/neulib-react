@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import { ICard } from "@/components/basic/Card/props";
+import { ICard } from "@/components/public/Card/props";
 
 export interface ITopBar {
   title: string;
   subtitle?: string;
-  titleAlign?: "center" | "left" | "right";
+  textAlign?: "center" | "left" | "right";
   leftElement?: ReactNode;
   rightElement?: ReactNode;
   card?: ICard;

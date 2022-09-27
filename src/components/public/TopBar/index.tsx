@@ -5,7 +5,7 @@ import cn from "classnames";
 import { applyDefaultProps } from "@/utils/componentModifiers";
 
 // components
-import Card from "@/components/basic/Card";
+import Card from "@/components/public/Card";
 
 // styles
 import "./styles.scss";
@@ -13,7 +13,7 @@ import "./styles.scss";
 const TopBar: FunctionComponent<ITopBar> = ({
   title,
   subtitle,
-  titleAlign = "center",
+  textAlign = "center",
   leftElement,
   rightElement,
   card,
@@ -24,7 +24,7 @@ const TopBar: FunctionComponent<ITopBar> = ({
     <div
       className={cn({
         "top-bar": true,
-        [`top-bar--align-${titleAlign}`]: true,
+        [`top-bar--align-${textAlign}`]: true,
       })}
     >
       <Card {...card}>
