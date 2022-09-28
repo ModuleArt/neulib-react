@@ -24,7 +24,6 @@ Components:
 - [ ] Add border modifiers (b), implement them at least for the Card component
 - [ ] Text component (props: size = "default" | "large", color = "default" | "secondary"), also don't forget use font-weight for "size" prop
 - [ ] Card onClick (return div or button)
-- [ ] Storybook
 - [ ] Theme provider & theme config (replace variables.scss)
 - [ ] Button "icon" prop
 - [ ] Button IPadding
@@ -32,6 +31,7 @@ Components:
 - [ ] Modal animation
 - [x] Modal "position" prop
 - [ ] Backdrop component
+- [ ] ladle
 
 ### Applications that use the library:
 
