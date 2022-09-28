@@ -12,7 +12,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "docs:dev": "start-storybook -p 6006",
-    "docs:build": "build-storybook -o docs --no-dll"
+    "docs:build": "build-storybook -o docs-build --no-dll"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
