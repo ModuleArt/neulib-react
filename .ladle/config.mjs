@@ -1,4 +1,5 @@
 export default {
+  base: "/neulib-react/",
   outDir: "docs",
   addons: {
     theme: {

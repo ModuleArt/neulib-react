@@ -1,0 +1,20 @@
+{
+  "about": {
+    "homepage": "https://www.ladle.dev",
+    "github": "https://github.com/tajo/ladle",
+    "version": 1
+  },
+  "stories": {
+    "atoms--button--default": {
+      "name": "Default",
+      "levels": [
+        "Atoms",
+        "Button"
+      ],
+      "locStart": 15,
+      "locEnd": 15,
+      "filePath": "src/components/public/Button/Button.stories.tsx",
+      "meta": {}
+    }
+  }
+}
