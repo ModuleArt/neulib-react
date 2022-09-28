@@ -14,6 +14,10 @@ module.exports = {
     builder: "@storybook/builder-vite",
   },
   async viteFinal(config, { configType }) {
+    if (configType === "PRODUCTION") {
+      config.base = "/neulib-react/";
+    }
+
     const { config: userConfig } = await loadConfigFromFile(
       path.resolve(__dirname, "../vite.config.ts")
     );

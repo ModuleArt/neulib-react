@@ -1,7 +1,7 @@
 {
   "name": "neulib-react",
   "version": "0.0.1",
-  "homepage": ".",
+  "homepage": "http://moduleart.github.io/neulib-react/",
   "type": "module",
   "main": "src/main.tsx",
   "files": [
