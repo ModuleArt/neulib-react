@@ -48,6 +48,14 @@
   }
 }
 
+.ladle-aside {
+  background: $color_card;
+
+  input {
+    background: $color_card;
+  }
+}
+
 div[data-reach-dialog-content] {
   right: 0;
   left: initial;
