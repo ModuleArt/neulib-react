@@ -1,6 +1,7 @@
 {
   "name": "neulib-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "homepage": "http://moduleart.github.io/neulib-react",
   "type": "module",
   "main": "src/main.tsx",
   "files": [
@@ -10,8 +11,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "docs:dev": "start-storybook -p 6006",
+    "docs:build": "build-storybook -o docs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
