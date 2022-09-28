@@ -17,5 +17,8 @@ export default {
     mode: {
       enabled: false,
     },
+    width: {
+      enabled: false,
+    },
   },
 };
