@@ -21,5 +21,11 @@ export default {
     width: {
       enabled: false,
     },
+    action: {
+      enabled: false,
+    },
+    source: {
+      enabled: false,
+    },
   },
 };

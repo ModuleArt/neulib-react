@@ -1,0 +1,57 @@
+.ladle-wrapper {
+  flex-direction: row-reverse;
+
+  table {
+    border: 1px solid $color_border;
+    width: 600px;
+  }
+
+  tr {
+    display: flex;
+  }
+
+  th {
+    text-align: left;
+    font-weight: $fontWeight_bold;
+    border-bottom: 1px solid $color_border;
+    padding: $size_sm $size_md;
+    flex: 1;
+  }
+
+  td {
+    font-weight: $fontWeight_default;
+    padding: $size_sm $size_md;
+    flex: 1;
+  }
+
+  h2 {
+    margin: 48px 0 24px;
+  }
+}
+
+.ladle-addons {
+  right: 0;
+  top: 0;
+  bottom: initial;
+  margin: 0;
+  padding: 48px 40px;
+
+  & > ul > li > button {
+    position: relative;
+  }
+
+  .ladle-addon-tooltip {
+    margin: 0;
+    right: 48px;
+    left: initial;
+    padding: 9px 12px;
+  }
+}
+
+div[data-reach-dialog-content] {
+  right: 0;
+  left: initial;
+  top: 0;
+  bottom: initial;
+  margin: 48px 40px;
+}
