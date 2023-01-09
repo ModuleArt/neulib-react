@@ -9,8 +9,8 @@
 
 html,
 body {
-  background: $color_bg;
-  color: $color_text;
+  background: var(--theme-color-bg);
+  color: var(--theme-color-text);
 }
 
 button {
